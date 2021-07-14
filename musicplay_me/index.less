@@ -1,0 +1,411 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.muscibox {
+    height: 100%;
+    audio {
+        height: 50px;
+        width: 100%;
+        display: none;
+    }
+
+    .topbox {
+        height: 180px;
+        padding: 25px;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .audiodiv {
+            display: flex;
+
+            .mask {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+
+                filter: blur(10px) brightness(0.8) contrast(1.2);
+                background-image: url("https://p2.music.126.net/yWtj0UXRJBCT9YI7csmAcw==/109951164190741294.jpg");
+                background-position: center;
+                position: absolute;
+                z-index: -1;
+
+            }
+
+            .imgbox {
+                width: 130px;
+                height: 130px;
+                padding: 20px;
+                box-sizing: border-box;
+                position: relative;
+                background-image: url(./img/cd.png);
+                background-size: 100%;
+
+                &.active {
+                    animation: myrotate 15s linear infinite;
+                }
+
+                img {
+                    border-radius: 50%;
+                }
+
+
+
+
+            }
+
+            .playbox {
+                width: 30px;
+                transform-origin: right top;
+                transform: rotate(-12deg) translateX(-12px);
+
+                &.active {
+                    transform: rotate(0deg) translateX(-12px);
+                }
+
+                img {}
+
+            }
+
+
+            .textbox {
+                flex: 1;
+                // background-color: red;
+                width: 330px;
+                padding-left: 20px;
+
+                h3 {
+                    font-size: 16px;
+                    color: #ffffff;
+                    line-height: 1.9;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: #fff;
+                    margin-bottom: 15px;
+                    line-height: 1.9;
+                }
+
+                .controls {
+                    margin-bottom: 26px;
+                    position: relative;
+
+                    i {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        font-family: iconfont !important;
+                        font-size: 16px;
+                        font-style: normal;
+                        color: #fff;
+
+                    }
+
+                    .prev {
+                        &::after {
+                            content: "\f0069";
+                        }
+                    }
+
+                    .stop {
+                        &.activestop {
+                            &::after {
+                                content: "\e76a";
+
+                            }
+                        }
+
+                        &::after {
+                            content: "\e66a";
+
+                        }
+
+                        //暂停 "\e76a"
+                    }
+
+                    .next {
+                        &::after {
+                            content: "\f006a";
+
+                        }
+                    }
+
+                    .playlist {
+                        &.playlb {
+                            &::after {
+                                content: "\e66c";
+                            }
+                        }
+
+                        &.playsj {
+                            &::after {
+                                content: "\e622";
+                            }
+                        }
+
+                        &.playone {
+                            &::after {
+                                content: "\e66d";
+                            }
+                        }
+
+                    }
+
+                    // 声音
+                    .voicebtnbox {
+                        float: right;
+                        height: 16px;
+                        line-height: 16px;
+                        position: relative;
+
+                        i.sound {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+
+                            &::after {
+                                content: "\e87a";
+                            }
+
+                            &.active {
+                                &::after {
+                                    content: "\e61e";
+                                }
+                            }
+                        }
+
+                        input.voicebtn {
+                            width: 90px;
+                            opacity: 0;
+                            margin-left: 20px;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            z-index: 4;
+                            // pointer-events: none;
+                        }
+
+                        div.voicebtnsliderbox {
+                            width: 87px;
+                            height: 6px;
+                            margin-left: 20px;
+                            margin-top: 5px;
+                            background: rgba(0, 0, 0, .3);
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+
+                            .voicebtnslider {
+                                height: 6px;
+                                width: 87px;
+                                border-radius: 2px;
+                                background-color: #0cb6d4;
+                                position: relative;
+
+
+                                i {
+                                    width: 6px;
+                                    height: 6px;
+                                    display: inline-block;
+                                    background-color: #0cb6d4;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    border-radius: 2px;
+                                    pointer-events: none;
+                                    z-index: 1;
+                                }
+
+
+                            }
+                        }
+                    }
+
+                }
+
+                .progress {
+                    position: relative;
+                    height: 7px;
+                    background: rgba(0, 0, 0, .3);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, .5) inset;
+                    // overflow: hidden;
+                    border-radius: 2px;
+                    position: relative;
+                    cursor: pointer;
+
+                    input {
+                        position: absolute;
+                        top: 0px;
+                        left: 0;
+                        width: 100%;
+                        height: 7px;
+                        z-index: 2;
+                        opacity: 0;
+                    }
+
+                    .slider {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 7px;
+                        width: 10px;
+                        background-color: #0cb6d4;
+                        border-radius: 3px;
+                    }
+
+                    .Time {
+                        font-size: 12px;
+                        color: #fff;
+                        background: rgba(0, 0, 0, .3);
+                        border-radius: 5px;
+                        position: absolute;
+                        width: 32px;
+                        height: 16px;
+                    }
+
+                    .nowTime {
+                        left: 0px;
+                        top: 10px;
+                    }
+
+                    .totalTime {
+                        right: 0px;
+                        top: 10px;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottombox {
+        background-color: #0e0e0e;
+        color: #333;
+        border-radius: 5px;
+        margin-top: 30px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+
+        ul {
+            li {
+                display: block;
+                font-family: iconfont !important;
+                // line-height: 1;
+                padding-left: 24px;
+                color: #fff;
+                position: relative;
+                line-height: 1.9;
+                font-size: 14px;
+
+                &.active {
+                    i {
+                        font-style: normal;
+                        float: left;
+                        position: absolute;
+                        left: 4px;
+                        top: 0px;
+
+                        &::after {
+                            content: "\e87a";
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .search{
+        width: 100%;
+        margin-top: 20px;
+        input{
+            width: 80%;
+            height: 40px;
+            outline: none;
+            border-radius: 6px;
+            border: 1px solid black;
+            text-indent: 1em;
+        }
+        button{
+            width: 18%;
+            height: 40px;
+            outline: none;
+            background-color: black;
+            border: 0;
+            color: #fff;
+            border-radius: 6px;
+            margin-left: 1%;
+        }
+        ul{
+            margin-top: 10px;
+            li{
+                width: 100%;
+                height: 50px;
+                position: relative;
+                margin-bottom: 4px;
+                .bkimg {
+                    background-position: center;
+                    height: 50px;
+                    width: 100%;
+                    background-color: black;
+                    filter: blur() brightness(0.7) contrast(0.7);
+                    border-radius: 25px;
+                    .imgbox {
+                        float: left;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                         }
+                    }
+                    .name {
+                        float: left;
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-weight: 500;
+                        color: #fff;
+                        margin-left: 20px;
+                    }
+            
+                    .singer {
+                        float: left;
+                        font-size: 15px;
+                        color: #ccc;
+                        position: absolute;
+                        top: 26px;
+                        left: 70px;
+            
+                    }
+                }
+            }
+        }
+       
+    }
+
+}
+
+@keyframes myrotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

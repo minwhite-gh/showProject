@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* text-align: center; */
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        .bodybox {
+            width: 312px;
+            height: 500px;
+            font-size: 0;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .maxbox {
+            width: 100%;
+        }
+        
+        .inpdiv {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            background-color: #f7f8fa;
+            background-image: url(./img/xj.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30%;
+            display: inline-block;
+            margin: 2px;
+        }
+        
+        input {
+            width: 100px;
+            height: 100px;
+            outline: none;
+            /* background-color: ; */
+            opacity: 0;
+        }
+        
+        .imgbox {
+            width: 100px;
+            height: 100px;
+            background-image: url(./img/2.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            margin: 2px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        span {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            right: -15px;
+            top: -15px;
+            z-index: 9;
+        }
+        
+        i {
+            position: absolute;
+            font-size: 7px;
+            color: black;
+            z-index: 3;
+            color: white;
+            font-style: normal;
+            left: 6px;
+            bottom: 3px;
+        }
+        
+        .mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+            /* z-index: 99; */
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            opacity: 0;
+            /* opacity: 1; */
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <p>文件预览</p>
+    <div class="bodybox">
+        <div class="maxbox">
+            <div class="box">
+                <div class="inpdiv">
+                    <input type="file" name="file" id="fileinp" multiple>
+                </div>
+            </div>
+        </div>
+        <div class="mask">
+
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    let fileinp = document.querySelector("#fileinp")
+    let box = document.querySelector(".box")
+    let inpdiv = document.querySelector(".inpdiv")
+    let mask = document.querySelector(".mask")
+        // let imglist = ["png", "jpg", "jpeg", "bmp", "gif"];
+
+    inpdiv.onmousedown = function() {
+        this.style.backgroundColor = "#767676"
+    }
+    inpdiv.onmouseup = function() {
+        this.style.backgroundColor = "#f7f8fa"
+    }
+
+    // 获取格式
+    function getfileType(fliedata) {
+        let index1 = fliedata.lastIndexOf(".")
+        let index2 = fliedata.length;
+        let type = fliedata.substring(index1, index2);
+        return type
+    }
+
+    fileinp.onchange = function() {
+        showPreview(this)
+    };
+
+    function showPreview(source) {
+
+        for (let i = 0; i < source.files.length; i++) {
+            let file = source.files[i];
+            if (window.FileReader) {
+                if (/^image\/\w+$/.test(file.type)) { //判断文件类型
+                    let fr = new FileReader();
+                    fr.onloadend = function(e) {
+                        // 创建元素
+                        let imgdiv = document.createElement("div")
+                        let span = document.createElement("span")
+                        let i = document.createElement("i")
+                        i.textContent = "x"
+                        span.appendChild(i)
+                        imgdiv.appendChild(span)
+                        imgdiv.className = "imgbox";
+                        imgdiv.style.backgroundImage = "url(" + e.target.result + ")";
+                        span.dataset.id = i;
+                        // 删除
+                        span.addEventListener("click", function(event) {
+                                event.stopPropagation()
+                                this.parentNode.parentNode.removeChild(this.parentNode);
+                            })
+                            // 图片预览
+                        imgdiv.addEventListener("click", function() {
+                            mask.style.opacity = "1";
+                            mask.style.zIndex = "99";
+                            mask.style.backgroundImage = this.style.backgroundImage;
+                            mask.dataset.bool = false;
+
+                        })
+                        box.insertBefore(imgdiv, box.children[0])
+                    };
+                    fr.readAsDataURL(file)
+                } else {
+                    alert("请上传图片！")
+                }
+            }
+        }
+
+    }
+    mask.onclick = function() {
+        this.style.opacity = "0";
+        this.style.zIndex = "-1";
+        this.dataset.bool = true;
+    }
+</script>
+
+</html>

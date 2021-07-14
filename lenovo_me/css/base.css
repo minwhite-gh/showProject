@@ -1,0 +1,68 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+a,
+i,
+em,
+b,
+strong,
+img,
+input {
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: inherit;
+	color: #000000;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+.lenovocenter {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.clear:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0px;
+	line-height: 0px;
+	visibility: hidden;
+}
+
+.clear {
+	zoom: l;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+/* 公共模块 */
+
+
+

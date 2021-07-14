@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 200px;
+            margin: 0 auto;
+        }
+        
+        .box .imgbox {
+            width: 200px;
+            height: 200px;
+            background-image: url(./img/2.jpg);
+            position: relative;
+        }
+        
+        .box .imgbox .whitebox {
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        
+        .box .imgbox .movebox {
+            width: 25px;
+            height: 25px;
+            background-image: url(./img/2.jpg);
+            /* background-position: 100px 100px; */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        
+        .box .barbox {
+            width: 200px;
+            height: 25px;
+            background-color: violet;
+            position: relative;
+        }
+        
+        .box .barbox .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-color: aquamarine;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            z-index: 3;
+        }
+        
+        .swipe {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="imgbox">
+            <div class="whitebox"></div>
+            <div class="movebox"></div>
+        </div>
+
+        <div class="barbox">
+            <div class="swipe"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let imgbox = document.querySelector(".imgbox")
+    let whitebox = document.querySelector(".whitebox")
+    let movebox = document.querySelector(".movebox")
+    let bar = document.querySelector(".bar")
+    let barbox = document.querySelector(".barbox")
+    let swipe = document.querySelector(".swipe")
+    let randomX = (Math.floor(Math.random() * (imgbox.clientWidth / 2 - bar.clientWidth))) + 100;
+    let randomY = Math.floor(Math.random() * (imgbox.clientHeight - bar.clientHeight));
+    let ranXYfun = (x, y) => {
+        // console.log("randomX == >", randomX)
+        // console.log("randomY == >", randomY)
+        this.randomX = (Math.floor(Math.random() * (imgbox.clientWidth / 2 - bar.clientWidth))) + 100;
+        this.randomY = Math.floor(Math.random() * (imgbox.clientHeight - bar.clientHeight));
+        whitebox.style.left = x + "px";
+        whitebox.style.top = y + "px";
+        movebox.style.left = "0px";
+        movebox.style.top = y + "px";
+        movebox.style.backgroundPosition = -x + "px " + -y + "px";
+    }
+    ranXYfun(randomX, randomY)
+
+    var bool = "";
+    let xbefore = "";
+    bar.onmousedown = (event) => {
+        bool = true
+        xbefore = event.offsetX;
+        let ybefore = event.offsetY;
+        swipe.style.display = "block";
+        console.log("xbefore", xbefore)
+    }
+    swipe.onmousemove = (event) => {
+        console.log("aaa")
+        if (bool) {
+            var xafter = event.offsetX;
+            var yafter = event.offsetY;
+            let chazhiX = "";
+
+            if (xafter - xbefore > barbox.clientWidth - bar.clientWidth) {
+                chazhiX = barbox.clientWidth - bar.clientWidth
+            } else if (xafter - xbefore < 0) {
+                console.log("xafter - xbefore=>1", xafter - xbefore)
+                chazhiX = 0
+            } else {
+                chazhiX = xafter - xbefore
+                console.log("xafter - xbefore=>2", xafter - xbefore)
+
+                movebox.style.left = chazhiX + "px"
+                bar.style.left = chazhiX + "px"
+            }
+
+        }
+        console.log("yafter", yafter)
+
+
+
+    }
+
+    swipe.onmouseup = (event) => {
+        let upX = event.offsetX;
+        let jiannum = ""
+        let movele = parseInt(whitebox.style.left)
+        if ((upX - xbefore) > movele) {
+            jiannum = (upX - xbefore) - movele
+        } else {
+            jiannum = movele - (upX - xbefore)
+        }
+        console.log(movele - (upX - xbefore))
+
+        if (jiannum < 5 && jiannum > -5) {
+            movebox.style.left = movele + "px"
+            bar.style.left = "0px"
+            alert("成功")
+            let randomX1 = (Math.floor(Math.random() * (imgbox.clientWidth / 2 - bar.clientWidth))) + 100;
+            let randomY1 = Math.floor(Math.random() * (imgbox.clientHeight - bar.clientHeight));
+            ranXYfun(randomX1, randomY1);
+        } else {
+            alert("请再试一次")
+            bar.style.left = "0px"
+            movebox.style.left = "0px"
+
+        }
+        bool = false;
+        // swipe.onmousemove = null;
+        swipe.style.display = "none";
+
+    }
+    document.onmouseup = () => {
+        bool = false;
+        bar.style.left = "0px"
+        movebox.style.left = "0px"
+            // swipe.onmousemove = null;
+            // bar.style.pointerEvents = null;
+
+    }
+</script>
+
+</html>

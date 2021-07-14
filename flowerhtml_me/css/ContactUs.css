@@ -1,0 +1,203 @@
+/* 大图 begin */
+.AfterUsbigimg {
+	height: 300px;
+}
+
+.AUimg {
+	width: 100%;
+	height: 300px;
+	background: url(../images/ABUIABAEGAAg6ZXk3gUowN-v7AUwgA84rAI.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+/* 大图 end */
+/* 联系与留言 begin */
+.contactandmessage {
+
+}
+
+.contacttop {
+	height: 44px;
+}
+
+.contacttop>p {
+	width: 86px;
+	height: 43px;
+	color: #F13A3A;
+	font-size: 16px;
+	border-bottom: #F13A3A solid 1px;
+	line-height: 43px;
+	text-align: center;
+
+}
+
+.contactbody {
+	width: 546px;
+	height: 310px;
+	border-top: #EAEAEA solid 1px;
+}
+
+.contactbody_text {
+	width: 420px;
+	height: 92px;
+}
+
+.contactbody_text1 {
+	margin-top: 5px;
+	margin-left: 36px;
+}
+
+.contactbody_text1>p {
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #666666;
+
+}
+
+.QRcode {
+	width: 510px;
+	height: 218px;
+	margin-left: 36px;
+	position: relative;
+}
+
+.QRcode1 {
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	width: 160px;
+	height: 190px;
+}
+
+.QRcode1>img {
+	width: 160px;
+	height: 160px;
+}
+
+.QRcode1>b {
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+}
+
+.QRcode2 {
+	position: absolute;
+	left: 224px;
+	top: 30px;
+	width: 160px;
+	height: 190px;
+}
+
+.QRcode2>img {
+	width: 160px;
+	height: 160px;
+}
+
+.QRcode2>b {
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+}
+
+.message {
+	width: 580px;
+	height: 345px;
+	margin-bottom: 36px;
+}
+
+.messagetitle {
+	height: 43px;
+}
+
+.messagetitle>p {
+	line-height: 43px;
+	font-size: 14px;
+	color: #666;
+}
+
+.messagebody dl input {
+	width: 188px;
+	height: 32px;
+	border: #DADADA solid 1px;
+	background-color: #fff;
+	font-size: 16px;
+	text-indent: 0.5em;
+	line-height: 54px;
+}
+
+.messagebody dl span {
+	margin-right: 3px;
+	font-size: 14px;
+	color: #666;
+	line-height: 54px;
+}
+
+.messagebody>dl {
+	margin-left: 14px;
+	margin-top: 13px;
+}
+
+.messagebody dt,
+.messagebody dd {
+	height: 54px;
+	margin-right: 30px;
+}
+
+.messagebody dt i {
+	font-style: normal;
+	color: #FF8252;
+}
+
+.neiron {
+	margin-left: 14px;
+	height: 68px;
+	margin-top: 9px;
+}
+
+.neiron>span {
+	font-size: 14px;
+	color: #666;
+	margin-right: 8px;
+	line-height: 68px;
+}
+
+.neiron>textarea {
+	display: inline-block;
+	font-size: 13px;
+	color: #757575;
+	width: 250px;
+	height: 60px;
+	padding: 2px;
+	border: #DADADA solid 1px;
+	background-color: #fff;
+	text-indent: 6px;
+	resize: none;
+	font-family: 微软雅黑;
+}
+.messagetitlebtn>button {
+	border: 0 none;
+	width: 230px;
+	height: 44px;
+	background-color: #F54F4F;
+	text-align: center;
+	line-height: 44px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: 53px;
+	margin-top: 32px;
+}
+#allmap {
+	width: 1200px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0;
+	font-family: "微软雅黑";
+	margin-bottom: 85px;
+}
+
+/* 联系与留言 end */

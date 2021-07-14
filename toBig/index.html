@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        .imgbox {
+            width: 235px;
+            height: 300px;
+            border: 1px solid block;
+            position: relative;
+            float: left;
+        }
+
+        .imgbox img {
+            width: 235px;
+            height: 300px;
+        }
+
+        .movebox {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            opacity: 0.5;
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+        }
+
+        .maxbox {
+            float: left;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .maxbox img {
+            width: 705px;
+            height: 900px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imgbox">
+        <img src="./images/girl.png" alt="">
+        <div class="movebox">
+
+        </div>
+    </div>
+    <div class="maxbox">
+        <img class="imgs" src="./images/girl.png" alt="">
+    </div>
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+    $(function(){
+        var maxX = "";
+    var maxY = "";
+    var imgbox = $(".imgbox");
+    var movebox = $(".movebox");
+    var maxbox = $(".maxbox");
+    var imgs = $(".imgs");
+    // console.log(imgs.width())
+    var imgboxWidth = parseInt($(".imgbox").width());
+    var imgboxHeight = parseInt($(".imgbox").height());
+    var moveboxWidth = parseInt($(".movebox").width());
+    var moveboxHeight = parseInt($(".movebox").height());
+    
+    imgbox.mouseenter(function () {
+        maxbox.show()
+        movebox.show()
+
+    })
+    imgbox.mousemove(function (event) {
+        var left = event.pageX - moveboxWidth/2
+        var top = event.pageY - moveboxHeight/2
+        if(left<0)left=0;
+        if(top<0)top=0;
+        if(left>=imgboxWidth-moveboxWidth){
+            left=imgboxWidth-moveboxWidth
+        }
+        if(top>=imgboxHeight-moveboxHeight){
+            top=imgboxHeight-moveboxHeight
+        }
+        movebox.css({
+            left:left,
+            top:top
+        })
+        var maxleft = -(left*maxbox.width()/moveboxWidth)
+        var maxtop = -(top*maxbox.height()/moveboxHeight)
+        imgs.css({
+            left:maxleft,
+            top:maxtop
+        })
+    })
+    imgbox.mouseleave(function () {
+        maxbox.hide()
+        movebox.hide()
+
+    })
+
+    })
+</script>
+
+</html>

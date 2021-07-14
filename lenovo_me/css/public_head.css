@@ -1,0 +1,99 @@
+/* 头部导航条 begin */
+.hd-logo {
+	width: 50px;
+}
+
+.hd-logo img {
+	width: 100%;
+
+}
+
+.hd_logoa {
+	height: 50px;
+
+}
+
+.header_nav1 li {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 22px;
+}
+
+.header_nava {
+	font-size: 15px;
+	color: #8d8d8d;
+}
+
+.header_nav2img a {
+	height: 50px;
+	font-size: 12px;
+	color: #000;
+	line-height: 50px;
+}
+
+.header_nav2imgi {
+	display: inline-block;
+	border-right: #000000 solid 1px;
+	height: 11px;
+	line-height: 50px;
+
+}
+
+.phonelogo {
+	margin-top: 14px;
+	margin-left: 23px;
+}
+
+.header_box {
+	width: 100%;
+	height: 70px;
+	background-color: #E0E0E0;
+}
+
+.header_boxul li {
+	float: left;
+	line-height: 70px;
+	margin-right: 45px;
+}
+
+.header_boxul a {
+	font-size: 17px;
+	color: #3A3A3A;
+	font-weight: 600;
+}
+
+.header_boxu2 {
+	background-color: #EAEAEA;
+	border: #EAEAEA solid 1px;
+	width: 268px;
+	height: 34px;
+	border-radius: 20px;
+	margin: 17px 0;
+
+}
+
+.header_boxu2 input {
+	width: 210px;
+	height: 33px;
+	border: 0;
+	margin: 1px 0 1px 17px;
+	background-color: #EAEAEA;
+	line-height: 36px;
+}
+
+.header_boxu2 .header_boxu2a {
+	width: 30px;
+	height: 30px;
+	margin-top: 2px;
+}
+
+.header_boxu2a .header_boxu2aspan {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	background: #EAEAEA url(../img/未标题-3.png) no-repeat center;
+}
+
+/* 头部导航条 end */

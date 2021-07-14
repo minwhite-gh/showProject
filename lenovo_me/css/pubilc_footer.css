@@ -1,0 +1,175 @@
+/* 尾部商标 begin */
+.sbiao {
+	width: 100%;
+	background-color: #272727;
+}
+
+.footerbottom {
+	width: 1200px;
+	height: 334px;
+	margin: 0 auto;
+	padding-top: 44px;
+}
+
+.footerbottom>ul>li {
+	width: 210px;
+	margin-bottom: 12px;
+
+}
+
+.footerbottom a.heada2 {
+	color: #fff;
+	font-size: 13px;
+	color: #CCCCCC;
+
+}
+
+.footerbottom a.heada {
+	font-size: 16px;
+	margin-bottom: 18px;
+	color: #CCCCCC;
+
+
+}
+
+.sbiaoright {
+	width: 230px;
+	float: left;
+}
+
+.sbiaoright ul.fx {
+	margin-top: 20px;
+}
+
+.sbiaoright h3 {
+	color: #CCCCCC;
+}
+
+.sbiaoright li {
+	display: inline-block;
+	width: 37px;
+	margin: 0 6px;
+}
+
+.sbiaoright li.li1 a {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) -63px -190px;
+}
+
+.sbiaoright li.li1 a:hover {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) -63px -238px;
+}
+
+.sbiaoright li.li2 a {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -119px -190px;
+}
+
+.sbiaoright li.li2 a:hover {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -119px -238px;
+}
+
+.sbiaoright li.li3 a {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -175px -190px;
+}
+
+.sbiaoright li.li3 a:hover {
+	display: inline-block;
+	width: 37px;
+	height: 36px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -175px -238px;
+}
+
+/* //////// */
+.wboteba {
+	margin-top: 5px;
+}
+.wboteba .wbo{
+	width: 82px;
+	height: 22px;
+	padding-top: 9px;
+
+}
+.wboteba .teba{
+	width: 82px;
+	height: 22px;
+	padding-top: 5px;
+}
+.wboteba .wbo a{
+	display: inline-block;
+	width: 82px;
+	height: 24px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -8px -132px;
+}
+
+.wboteba .wbo:hover a{
+	display: inline-block;
+	width: 82px;
+	height: 24px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -8px -158px;
+}
+
+
+.wboteba .teba a{
+	display: inline-block;
+	width: 82px;
+	height: 22px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -118px -130px;
+}
+
+.wboteba .teba:hover a{
+	display: inline-block;
+	width: 82px;
+	height: 22px;
+	background: url(../img/platform_icons_sprits.png) no-repeat -118px -156px;
+}
+.szgj{
+	width: 230px;
+	font-size: 16px;
+	color: #cccccc;
+	margin: 60px 0 10px;
+	}
+.szgjimg{
+	width: 186px;
+	height: 24px;
+	background: url(../img/dc95e9d6-bef7-4f4b-8b03-e6c3deeaa5a7.jpg);
+	
+}
+.footer_bat{
+	width: 100%;
+	border-top:#424141 solid 1px;
+	
+}
+.footer_bat .lenovocenter{
+	height: 46px;
+}
+.footer_bat_left>a,.footer_bat_left>span{
+	font-size: 12px;
+	color: #ccc;
+	line-height:46px;
+}
+.footer_bat_right>a,.footer_bat_right>span{
+	font-size: 12px;
+	color: #ccc;
+	line-height:46px;
+}
+.footer_bat_left>span{
+	margin: 0 6px;
+}
+.footer_bat_right>span{
+	margin: 0 6px;
+}
+/* 尾部商标 end */

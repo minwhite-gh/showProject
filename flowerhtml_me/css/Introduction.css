@@ -1,0 +1,59 @@
+/* 大图 begin */
+.AfterUsbigimg{
+	height: 300px;
+}
+.AUimg{
+	width: 100%;
+	height: 300px;
+	background: url(../images/ABUIABAEGAAgwtzg3gUo1vSQigcwgA84rAI.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+/* 大图 end */
+/* ol轻妍系列 begin */
+.imgtabletop{
+	text-align: center;
+	}
+.imgtabletop>p{
+	margin-top: 70px;
+	height: 45px;
+	font-size: 25px;
+	line-height: 45px;
+	color: #333;
+}
+.imgtabletop>span{
+	display: block;
+	height: 31px;
+	line-height: 31px;
+	font-size: 14px;
+	color: #A1A1A1;
+}
+.imgtablebody{
+	padding: 0 2px;
+	margin-bottom: 120px;
+}
+.imgtablebody>ol{
+	margin-bottom: 28px;
+}
+.imgtablebody>ol>li{
+	float: left;
+	padding: 29px 50px 0px 50px;
+
+}
+
+.imgtablebody>ol>li>a{
+	display: inline-block;
+	}
+.imgtablebody>ol>li>a>p{
+    font-size: 16px;
+	color: #333;
+	text-align: center;
+	height: 42px;
+	line-height: 42px;
+}
+.imgtablebody>ol>li>a>img{
+	display: block;
+	width: 194px;
+	height: 200px;
+}
+	
+/* ol轻妍系列 end */

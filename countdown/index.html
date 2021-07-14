@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 190px;
+            margin: 0 auto;
+        }
+        
+        a {
+            height: 100%;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .abox {
+            height: 260px;
+            background-image: url(./img/bg.png);
+            background-size: 100%;
+            color: white;
+        }
+        
+        .abox .text {
+            font-size: 30px;
+            text-align: center;
+            font-weight: 700;
+            padding-top: 30px;
+        }
+        
+        .abox p {
+            margin-top: 100px;
+            text-align: center;
+        }
+        
+        .abox p strong {
+            font-size: 18px;
+        }
+        
+        .abox p span {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        
+        ul {
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+            padding-left: 30px;
+        }
+        
+        ul li {
+            list-style: none;
+            float: left;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        ul li[class="dian"] {
+            width: 20px;
+            height: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        ul li:nth-of-type(1),
+        ul li:nth-of-type(3),
+        ul li:nth-of-type(5) {
+            width: 30px;
+            height: 30px;
+            /* margin-right: 20px; */
+            background-color: #2f3430;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="">
+            <div class="abox">
+                <div class="text">京东秒杀</div>
+                <p><strong>00:00</strong><span>点场</span>&nbsp;<span>倒计时</span></p>
+                <ul>
+                    <li class="h">00</li>
+                    <li class="dian">:</li>
+                    <li class="m">00</li>
+                    <li class="dian">:</li>
+                    <li class="s">00</li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <script>
+        let setTime = (timenum) => {
+            getnewTime = () => {
+                let newtimedata = [];
+                let date = new Date();
+                let year = date.getFullYear();
+                let month = date.getMonth();
+                let strDate = date.getDate();
+                newtimedata.year = year;
+                newtimedata.month = month;
+                newtimedata.strDate = strDate;
+                return newtimedata;
+            }
+            getnextTime = () => {
+                let nextdata = [];
+                var time = (new Date).getTime() + 24 * 60 * 60 * 1000;
+                var date = new Date(time);
+                let year = date.getFullYear();
+                var month = date.getMonth();
+                var strDate = date.getDate();
+                nextdata.year = year;
+                nextdata.month = month;
+                nextdata.strDate = strDate;
+                return nextdata;
+            }
+
+
+            let strongtime = document.querySelector(".abox strong");
+            let Htime = document.querySelector(".abox ul .h");
+            let Mtime = document.querySelector(".abox ul .m");
+            let Stime = document.querySelector(".abox ul .s");
+
+
+            setInterval(function() {
+
+                    let newdate = new Date();
+
+                    let starttime = "";
+                    if (newdate.getHours() % 2 == 0) {
+                        starttime = newdate.getHours();
+                    } else {
+                        starttime = newdate.getHours() - 1;
+                    }
+                    strongtime.innerText = starttime > 9 ? starttime : "0" + starttime + ":00";
+
+
+
+                    // 未来timenum小时
+                    let afterdata = "";
+                    let gettime = "";
+                    if (starttime + timenum >= 24) {
+                        // 获取明天日期的数组
+                        gettime = getnextTime();
+                        afterdata = 0;
+                    } else {
+                        // 获取今天日期数组
+                        gettime = getnewTime();
+                        afterdata = starttime + timenum;
+                    }
+
+
+
+                    let wlaitime = new Date(gettime.year, gettime.month, gettime.strDate, afterdata, 00, 00);
+                    let newtime = newdate.getTime();
+                    let times = (wlaitime - newtime) / 1000;
+                    let h = Math.floor(times / 60 / 60) < 9 ? "0" + Math.floor(times / 60 / 60) : Math.floor(times / 60 / 60);
+                    let m = Math.floor(times / 60 % 60) < 9 ? "0" + Math.floor(times / 60 / 60 % 60) : Math.floor(times / 60 % 60);
+                    let s = Math.floor(times % 60) < 9 ? "0" + Math.floor(times % 60) : Math.floor(times % 60);
+
+                    Htime.innerText = h;
+                    Mtime.innerText = m;
+                    Stime.innerText = s;
+                },
+                1000)
+        }
+        setTime(2);
+    </script>
+</body>
+
+</html>

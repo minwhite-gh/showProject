@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" />
+</head>
+
+<body>
+    <div class="maxbox">
+        <div class="backgroundbox">
+            <div class="box">
+                <h2>STEP</h2>
+                <h3>THIS WEEK</h3>
+                <ul class="chart">
+                    <li><span>T</span></li>
+                    <li><span>T</span></li>
+                    <li><span>T</span></li>
+                    <li><span>T</span></li>
+                    <li><span>T</span></li>
+                </ul>
+                <p>93,000</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    var back = document.querySelector(".backgroundbox")
+    back.onclick = function () {
+        this.classList.toggle("active")
+    }
+</script>
+
+</html>

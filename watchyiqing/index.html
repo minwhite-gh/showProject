@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <h3>疫情播报</h3>
+    <div class="bodybox">
+
+        <div class="container">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs row" role="tablist">
+                <li role="presentation" class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#domestic" aria-controls="domestic" role="tab" data-toggle="tab">国内</a></li>
+                <li role="presentation" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#overseas" aria-controls="overseas" role="tab" data-toggle="tab">海外</a></li>
+                <li role="presentation" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#Global" aria-controls="Global" role="tab" data-toggle="tab">全球</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- 国内 -->
+                <div role="tabpanel" class="gnbox tab-pane active" id="domestic">
+                    <!-- 6个格子 -->
+                    <div class="domestictable">
+                        <div class="row domestic-table1">
+                            <div class="diagnosisbox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="diagnosis">累计确诊</p>
+                                <strong class="diagnosisnum">769879</strong>
+                                <span class="diagnosisjiao">较上日<i class="diagnosisjiao">+110</i></span>
+                            </div>
+                            <div class="curebox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="cure">累计治愈</p>
+                                <strong class="curenum">769879</strong>
+                                <span class="curejiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="deathbox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="death">累计死亡</p>
+                                <strong class="deathnum">769879</strong>
+                                <span class="deathjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="row domestic-table2">
+                            <div class="existingbox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="existing">现有确诊</p>
+                                <strong class="existingnum">769879</strong>
+                                <span class="existingjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="inputbox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="input">境外输入确诊</p>
+                                <strong class="inputnum">769879</strong>
+                                <span class="inputjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="Suspectedbox col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="Suspected">现有疑似</p>
+                                <strong class="Suspectednum">769879</strong>
+                                <span class="Suspectedjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 疫情显示 -->
+                    <div class="yiqinglistbox row">
+                        <h5>国内疫情</h5>
+                        <div class="listbox col-xs-12 col-sm-12 col-md-12 col-lg-12 " name="" id="">
+                            <ul class="toplist">
+                                <li class="">地区</li>
+                                <li class="">现有确诊</li>
+                                <li class="">累计确诊</li>
+                                <li class="">死亡</li>
+                                <li class="">治愈</li>
+                            </ul>
+                            <!-- 动态生成 -->
+                            <!-- <div class="bomboxlist dropdown">
+                                <ul class="btn">
+                                    <li><span>新疆维吾尔自治区</span></li>
+                                    <li>2222</li>
+                                    <li>22</li>
+                                    <li>22222</li>
+                                    <li>
+                                        <span>2222</span>
+                                        <i class="active"></i>
+                                    </li>
+                                </ul>
+
+                                <div class="dropdown-menubox ">
+                                    <ul>
+                                        <li>自治区</li>
+                                        <li>2222</li>
+                                        <li>22</li>
+                                        <li>22222</li>
+                                        <li><span>2222</span></li>
+                                    </ul>
+                                    <ul>
+                                        <li>自治区</li>
+                                        <li>2222</li>
+                                        <li>22</li>
+                                        <li>22222</li>
+                                        <li><span>2222</span></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 国外 -->
+                <div role="tabpanel" class="gwbox tab-pane" id="overseas">
+                    <div class="gwboxtext"></div>
+                    <div class="gwboxbody">
+                        <h5>国外疫情</h5>
+                        <div class="gwboxbodybox col-xs-12 col-sm-12 col-md-12 col-lg-12 " name="" id="">
+                            <ul class="toplist">
+                                <li class="">地区</li>
+                                <li class="">现有确诊</li>
+                                <li class="">累计确诊</li>
+                                <li class="">死亡</li>
+                                <li class="">治愈</li>
+                            </ul>
+                            <!-- <div class="gwbomboxlist dropdown">
+                                <ul class="btn btn-default dropdown-toggle" id="gwdropdownMenu1" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                    <li><span>新疆维吾尔自治区</span></li>
+                                    <li>2222</li>
+                                    <li>22</li>
+                                    <li>22222</li>
+                                    <li><span>2222</span><i class="glyphicon glyphicon-menu-down"></i></li>
+                                </ul>
+                                <div class="gwdropdown-menubox dropdown-menu" aria-labelledby="gwdropdownMenu1">
+                                    <ul>
+                                        <li>自治区</li>
+                                        <li>2222</li>
+                                        <li>22</li>
+                                        <li>22222</li>
+                                        <li><span>2222</span></li>
+                                    </ul>
+                                    <ul>
+                                        <li>自治区</li>
+                                        <li>2222</li>
+                                        <li>22</li>
+                                        <li>22222</li>
+                                        <li><span>2222</span></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 全球 -->
+                <div role="tabpanel" class="globalbox tab-pane" id="Global">
+                    <div class="domestictable">
+                        <div class="row domestic-table1">
+                            <div class="diagnosisbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="diagnosis">累计确诊</p>
+                                <strong class="diagnosisnum">769879</strong>
+                                <span class="diagnosisjiao">较上日<i class="diagnosisjiao">+110</i></span>
+                            </div>
+                            <div class="existingbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="existing">现有确诊</p>
+                                <strong class="existingnum">769879</strong>
+                                <span class="existingjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="curebox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="cure">累计治愈</p>
+                                <strong class="curenum">769879</strong>
+                                <span class="curejiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="deathbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="death">累计死亡</p>
+                                <strong class="deathnum">769879</strong>
+                                <span class="deathjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                        </div>
+                        <p>累计确诊数量最多的4个国家</p>
+                        <div class="row domestic-table2">
+
+                            <!-- <div class="inputbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="input">境外确诊</p>
+                                <strong class="inputnum">769879</strong>
+                                <span class="inputjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="Suspectedbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="Suspected">现有疑似</p>
+                                <strong class="Suspectednum">769879</strong>
+                                <span class="Suspectedjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="Suspectedbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="Suspected">现有疑似</p>
+                                <strong class="Suspectednum">769879</strong>
+                                <span class="Suspectedjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div>
+                            <div class="Suspectedbox col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <p class="Suspected">现有疑似</p>
+                                <strong class="Suspectednum">769879</strong>
+                                <span class="Suspectedjiao">较上日
+                                <i class="diagnosisjiao">+110</i>
+                            </span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

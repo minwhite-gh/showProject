@@ -1,0 +1,285 @@
+
+
+.hd-logo {
+	width: 50px;
+}
+.hd-logo img{
+	width: 100%;
+	
+}
+.hd_logoa{
+	height: 50px;
+	
+}
+.header_nav1{
+	width: 1000px;
+}
+.header_nav1 li{
+	float: left;
+	height: 50px;
+    line-height: 50px;
+    margin-right: 22px;
+}
+.header_nava{
+	font-size: 15px;
+	color: #8d8d8d;
+}
+.header_nav2img a{
+	height: 50px;
+	font-size: 14px;
+	color: #8D8D8D;
+	line-height: 50px;
+	}
+.header_nav2imgi{
+	display: inline-block;
+	border-right: #8D8D8D solid 1px;
+	height: 11px;
+	line-height: 50px;
+
+}
+.phonelogo{
+	margin-top: 14px;
+	margin-left: 23px;
+}
+.header_nav2img>a:hover{
+	color: #000000;
+	}
+/* 头部导航条 end */
+
+/* 轮播图 begin */
+.listbody{
+	width: 100%;
+	background-color: #F5F5F5;
+}
+.listlbt-li{
+	width: 278px;
+	height: 72px;
+	border-left: #CCCCCC solid 1px;
+	border-bottom: #CCCCCC solid 1px;
+}
+.listlbt-li:hover{
+	width: 278px;
+	height: 72px;
+	border-left: #FF0000 solid 2px;
+	border-bottom: #CCCCCC solid 1px;
+	background-color: #FAFAFA;
+
+}
+.listlbt-li-div{
+	padding-top: 14px;
+	margin-left: 88px;
+}
+.listlbt-li-div>p{
+	font-size: 14px;
+	color: red;
+	font-weight: 600;
+	margin-bottom: 17px;
+}
+.listlbt-li-div>a{
+	font-size:12px;
+	color: #000000;
+}
+/* 右边图 */
+.listlbtli2{
+	position: relative;	
+}
+.listlbtli2 a{
+	display: block;
+	width: 920px;
+	height: 440px;
+	background: url(../img/erwfmfy7o5py66daalx15uby5qescc504637.jpg) no-repeat center;
+	}
+/* 左按钮 */
+.listbtnle{
+	width:40px;
+	height: 70px;
+	background: url(../img/icon.png) no-repeat -87px -192px;
+	position: absolute;
+	left: 0;
+	top:185px;
+	opacity : 0;
+		}
+.listbtnri{
+	width:40px;
+	height: 70px;
+	background: url(../img/icon.png) no-repeat -129px -192px;
+	position: absolute;
+	right: 0;
+	top:185px;
+	opacity : 0;
+
+		}
+
+.listlbtli2:hover .listbtnle{
+	opacity : 1;
+
+}
+.listlbtli2:hover .listbtnri{
+	opacity : 1;
+
+}
+
+/* 轮播图 end */
+
+/* 主体 begin */
+.listbody{
+	width: 100%;
+	background-color: #F5F5F5;
+}
+.mxdp{
+	height: 38px;
+	line-height: 38px;
+	padding-top: 62px;
+	}
+.mxdp>p{
+	font-size:24px;
+	color: #000;
+	font-weight: 500;
+}
+.mximg .mximg1{
+	width: 233px;
+	height: 166px;
+	
+}
+.mximg1div>ul>li>a>img{
+	float: left;
+	width: 77.5px;
+	height: 83px;
+}
+	
+.mximg234{
+	width: 957px;
+	height: 166px;
+	
+}
+.mximg234div>ul{
+	width: 967px;
+	overflow: hidden;
+}
+.mximg234div>ul>li{
+	float: left;
+	margin-left: 10px;
+	
+}
+.mximg234div>ul>li>img{
+	width: 312px;
+	height: 166px;
+}
+
+/* 联想手机 begin */
+.bodyphone{
+	padding-bottom: 60px;
+}
+.bodyphonetop{
+	height: 38px;
+	line-height: 38px;
+	padding-top: 62px;
+	margin-bottom: 30px;
+	}
+.bodyphonetop>p{
+	font-size:24px;
+	color: #000;
+	font-weight: 500;
+}
+.mainleft img{
+	display: block;
+	width: 234px;
+	height: 610px;
+	}
+.mainright{
+	width: 966px;
+}
+.mainrightimg {
+	padding: 28px 40px 20px 40px;
+	background-color: #fff;
+}
+.mainrightimg img{
+	display: block;
+	width:150px;
+	height: 150px;
+	text-align: center;
+}
+.mainright>ul>li{
+	float: left;
+	width: 231px;
+	height: 300px;
+	background-color: #fff;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.mainrighttitlep1{
+	font-size: 14px;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	width: 214px;
+	font-weight: 200;
+}
+.mainrighttitlep2{
+	font-size: 12px;
+	color: #000000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 10px;
+}
+.mainrighttitlep3{
+	color: #FF6700;
+	font-size: 10px;
+}
+/* 联想手机 end */
+
+
+/* 视频专区 begin */
+.video{
+	width: 1200px;
+	height: 38px;
+	line-height: 38px;
+	padding-top: 62px;
+	margin-bottom: 30px;
+	}
+.video>p{
+	line-height: 38px;
+	font-size:24px;
+	color: #000;
+	font-weight: 500;
+}
+.video>ul>li{
+	float: left;
+	line-height: 38px;
+	margin-left: 66px;
+	font-weight: 800;
+	font-size: 18px;
+
+}
+.video .videolicon{
+	float: left;
+	line-height: 38px;
+	margin-left: 66px;
+	font-weight: 800;
+	font-size: 18px;
+	color:#e60012 ;
+	border-bottom: #e60012 solid 2px;
+}
+.videobodytop{
+	width: 1200px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height:74px;
+}
+.videobody{
+	width: 1200px;
+	padding-bottom: 40px;
+	margin-bottom: 86px;
+}
+.videobody>p{
+	float: right;
+	width: 725px;
+	font-size: 12px;
+	text-indent: 2em;
+}
+/* 视频专区 end */
+
+
+/* 主体 end */

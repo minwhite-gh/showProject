@@ -1,0 +1,401 @@
+html {
+  height: 100%;
+  font-family: "宋体";
+}
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+  background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+  background: -moz- oldlinear-gradient(left, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+.maxbox {
+  width: 25%;
+  max-width: 360px;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+     -moz-perspective: 1000px;
+          perspective: 1000px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.maxbox .backgroundbox {
+  width: 100%;
+  padding-bottom: 130%;
+  max-height: 480px;
+  background: url(img/1.jpg) no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+       background-size: cover;
+  position: relative;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-transform-origin: 50% 50% 60px;
+     -moz-transform-origin: 50% 50% 60px;
+      -ms-transform-origin: 50% 50% 60px;
+       -o-transform-origin: 50% 50% 60px;
+          transform-origin: 50% 50% 60px;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  -webkit-transform: translateZ(160px);
+     -moz-transform: translateZ(160px);
+          transform: translateZ(160px);
+  z-index: 1;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+     -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+}
+.maxbox .backgroundbox .mask {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+.maxbox .backgroundbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  background: rgba(42, 33, 22, 0.397);
+  z-index: 0;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+.maxbox .backgroundbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  background: rgba(0, 0, 0, 0.842);
+  -webkit-transform: translateZ(-15px);
+     -moz-transform: translateZ(-15px);
+          transform: translateZ(-15px);
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+     -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+.maxbox .backgroundbox .box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+.maxbox .backgroundbox .box h2 {
+  font-size: 36px;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  -webkit-transform: translateZ(30px);
+     -moz-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+.maxbox .backgroundbox .box h3 {
+  line-height: 4em;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  -webkit-transform: translateZ(20px);
+     -moz-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+.maxbox .backgroundbox .box p {
+  font-size: 35px;
+  line-height: 4em;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  -webkit-transform: translateZ(10px);
+     -moz-transform: translateZ(10px);
+          transform: translateZ(10px);
+}
+.maxbox .backgroundbox .box ul.chart {
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+}
+.maxbox .backgroundbox .box ul.chart li {
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  position: relative;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotateZ(45deg) translateZ(0px);
+     -moz-transform: rotateZ(45deg) translateZ(0px);
+          transform: rotateZ(45deg) translateZ(0px);
+  margin: 0 10px;
+  float: left;
+  color: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.maxbox .backgroundbox .box ul.chart li span {
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  text-align: center;
+  opacity: 0;
+}
+.maxbox .backgroundbox .box ul.chart li::before {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  content: "20,000";
+  width: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#949494), to(white));
+  background: -webkit-linear-gradient(left, #949494, white);
+  background: -moz- oldlinear-gradient(left, #949494, white);
+  background: -o-linear-gradient(left, #949494, white);
+  background: linear-gradient(to right, #949494, white);
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  left: auto;
+  right: 0;
+  -webkit-transform-origin: right bottom;
+     -moz-transform-origin: right bottom;
+      -ms-transform-origin: right bottom;
+       -o-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transform: rotateY(-90deg) rotateX(-90deg);
+     -moz-transform: rotateY(-90deg) rotateX(-90deg);
+          transform: rotateY(-90deg) rotateX(-90deg);
+  text-indent: 1em;
+}
+.maxbox .backgroundbox .box ul.chart li::after {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  -moz-transition: inherit;
+  transition: inherit;
+  width: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#949494), to(white));
+  background: -webkit-linear-gradient(left, #949494, white);
+  background: -moz- oldlinear-gradient(left, #949494, white);
+  background: -o-linear-gradient(left, #949494, white);
+  background: linear-gradient(to right, #949494, white);
+  left: auto;
+  right: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-transform-origin: right bottom;
+     -moz-transform-origin: right bottom;
+      -ms-transform-origin: right bottom;
+       -o-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transform: rotateY(-90deg) rotateX(180deg) translateY(20px);
+     -moz-transform: rotateY(-90deg) rotateX(180deg) translateY(20px);
+          transform: rotateY(-90deg) rotateX(180deg) translateY(20px);
+}
+.maxbox .backgroundbox.active {
+  -webkit-transform: translateZ(160px) rotateX(60deg);
+     -moz-transform: translateZ(160px) rotateX(60deg);
+          transform: translateZ(160px) rotateX(60deg);
+}
+.maxbox .backgroundbox.active h2,
+.maxbox .backgroundbox.active h3 {
+  opacity: 0;
+}
+.maxbox .backgroundbox.active ul.chart li span {
+  opacity: 1;
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(1) {
+  -webkit-transform: rotateZ(35deg) translateZ(190px);
+     -moz-transform: rotateZ(35deg) translateZ(190px);
+          transform: rotateZ(35deg) translateZ(190px);
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(1)::before,
+.maxbox .backgroundbox.active ul.chart li:nth-child(1)::after {
+  opacity: 1;
+  width: 190px;
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(2) {
+  -webkit-transform: rotateZ(35deg) translateZ(150px);
+     -moz-transform: rotateZ(35deg) translateZ(150px);
+          transform: rotateZ(35deg) translateZ(150px);
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(2)::before,
+.maxbox .backgroundbox.active ul.chart li:nth-child(2)::after {
+  opacity: 1;
+  width: 150px;
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(3) {
+  -webkit-transform: rotateZ(35deg) translateZ(100px);
+     -moz-transform: rotateZ(35deg) translateZ(100px);
+          transform: rotateZ(35deg) translateZ(100px);
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(3)::before,
+.maxbox .backgroundbox.active ul.chart li:nth-child(3)::after {
+  opacity: 1;
+  width: 100px;
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(4) {
+  -webkit-transform: rotateZ(35deg) translateZ(80px);
+     -moz-transform: rotateZ(35deg) translateZ(80px);
+          transform: rotateZ(35deg) translateZ(80px);
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(4)::before,
+.maxbox .backgroundbox.active ul.chart li:nth-child(4)::after {
+  opacity: 1;
+  width: 80px;
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(5) {
+  -webkit-transform: rotateZ(35deg) translateZ(140px);
+     -moz-transform: rotateZ(35deg) translateZ(140px);
+          transform: rotateZ(35deg) translateZ(140px);
+}
+.maxbox .backgroundbox.active ul.chart li:nth-child(5)::before,
+.maxbox .backgroundbox.active ul.chart li:nth-child(5)::after {
+  opacity: 1;
+  width: 140px;
+}
+/*# sourceMappingURL=./index.css.map */

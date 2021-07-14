@@ -1,0 +1,139 @@
+/* 大图 begin */
+.AfterUsbigimg{
+	height: 300px;
+}
+.AUimg{
+	width: 100%;
+	height: 300px;
+	background: url(../images/ABUIABAEGAAgmJnk3gUo8tuTjQIwgA84rAI.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+/* 大图 end */
+/* 导航条 begin */
+.dhtbox{
+	width: 1179px;
+	margin-left: 21px;
+	border-bottom: #A9A9A9 solid 1px;
+}
+.dhtbox>p{
+	height: 40px;
+	margin-top: 18px;
+	margin-bottom: 5px;
+}
+.dhtboxspana{
+	margin-left: 8px;
+}
+.dhtbox>p>span{
+	font-size: 14px;
+	line-height: 40px;
+	color: #666;
+}
+.dhtbox>p>span>a{
+	color: #666;
+}
+.dhtboxnews{
+	width: 1179px;
+	margin-left: 21px;
+	border-bottom: #ccc solid 1px;
+}
+.dhtboxnews>p{
+	height: 44px;
+	margin-top: 70px;
+	/* margin-bottom: 5px; */
+}
+.dhtboxnews>p>span.dhtboxnewssp1{
+	font-size: 16px;
+	line-height: 44px;
+	color: #FF6637;
+	width: 200px;
+	font-style: normal;
+	padding-left: 13px;
+	margin-left: 5px;
+	background: url(../images/AKMDCAQQ-eWOvgUYz6qQ8gU.png) no-repeat left center;
+}
+.dhtboxnews>p>span.dhtboxnewssp2{
+	font-size: 14px;
+	line-height: 44px;
+	margin-right: 13px;
+	font-weight: 545;
+}
+.dhtboxnews>p>span.dhtboxnewssp2>a{
+	color: #666;
+}
+
+/* 导航条 end */
+/* 资讯内容 begin */
+.zxneiron{
+	margin-left: 21px;
+	margin-top: 20px;
+}
+.zxneiron_1{
+	height: 180px;
+	padding: 18px 0px;
+	border-bottom: #E5E5E5 dashed 1px;
+}
+.zxneiron_1con{
+	height: 180px;
+	padding: 18px 0px;
+	border: 0 none ;
+}
+.zxneiron_1img{
+	width: 250px;
+	height: 180px;
+	}
+.zxneiron_1img>img{
+	width:100%
+	}
+.zxneiron_1text{
+	width: 920px;
+	height: 180px;
+}
+.zxneiron_1text>p.zxneiron_1text1>b{
+	display: block;
+	color: #666666;
+	font-size: 16px;
+	float: left;
+}
+.zxneiron_1text>p.zxneiron_1text1>b:hover{
+	color: #FF6637;
+}
+.zxneiron_1text>p.zxneiron_1text1>span{
+	color: #666;
+	font-size: 14px;
+	float: right;
+	margin-right: 5px;
+
+}
+.zxneiron_1text>p.zxneiron_1text2{
+	color: #797979;
+	font-size: 15px;
+	padding-top: 4px;
+	line-height: 18px;
+}
+/* 资讯内容 end */
+/* 点击按钮 begin */
+.dianji{
+	height: 62px;
+	text-align: center;
+	margin-bottom: 105px;
+}
+.dianji>button{
+	cursor:pointer;
+	border: 0 none;
+	outline: none;
+	background-color: #fff;
+	font-size: 14px;
+	color: #666666;
+	margin: 0 10px;
+}
+.dianji>span{
+	font-size: 14px;
+	line-height: 62px;
+	margin: 0 12px;
+	color: #666666;
+}
+.dianji>span.spancon{
+	color: #FF6691;
+}
+
+/* 点击按钮 end */

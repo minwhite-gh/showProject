@@ -1,0 +1,127 @@
+/* 尾部 begin */
+.footerbg{
+	width: 100%;
+	background-color: #2B2B2B;
+}
+.footer{
+	height: 234px;
+	overflow: hidden;
+
+}
+.footerHd{
+	width: 1260px;
+	margin-left: 83px;
+	padding-top: 40px;
+	}
+.footerHd_1{
+	position: relative;
+	margin-right: 183px;
+
+}
+.footerHd_1 .footerHd_1_img1_1{
+	width: 50px;
+	height: 50px;
+	background: url(../images/AD0Iu_ufBxAEGAAg6drLzwUojPKl6gcwMjgy.png) no-repeat center;
+	line-height: 64px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.footerHd_1 .footerHd_1_img1_2{
+	width: 50px;
+	height: 50px;
+	background: url(../images/AD0Iu_ufBxAEGAAg7drLzwUotoT08wQwMjgy.png) no-repeat center;
+	position: absolute;
+	left: -4px;
+	top: 0px;
+}
+.footerHd_1 .footerHd_1_img1_3{
+	width: 50px;
+	height: 50px;
+	background: url(../images/AD0Iu_ufBxAEGAAg8NrLzwUortDrqwUwMjgy.png) no-repeat center;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.footerHd_1 .footerHd_1_img2{
+	width: 30px;
+	height: 31px;
+	background: url(../images/AD0Iu_ufBxAEGAAgmtvLzwUo_LmkqQcwHjgf.png) no-repeat center;
+	position: absolute;
+	left: 36px;
+	top: 11px;
+}
+.footerHd_1Text{
+	margin-left: 65px;
+	margin-top: 5px;
+}
+.footerHd_1Text>p{
+	font-size:16px;
+	color: #fff;
+}
+.longimg{
+	width: 1030px;
+	height: 30px;
+	margin: 0 auto;
+	background: url(../images/AD0Iu_ufBxAEGAAgmdvLzwUo8PeZ3wMwhgg4Hg.png) no-repeat center;
+}
+.texttitle{
+	text-align: center;
+	height: 26px;
+	margin: 0 auto;
+	margin-top: 22px;
+	margin-bottom: 52px;
+}
+.texttitle>span{
+	color: #999;
+	font-size: 14px;
+	margin: 0 42px;
+	line-height: 26px;
+}
+.texttitle>a{
+	color: #999;
+	font-size: 14px;
+	line-height: 26px;
+
+}
+/* 尾部 end */
+/* 版权 begin */
+.bqbg{
+	width: 100%;
+	background-color: #222524;
+	padding-top: 37px;
+	padding-bottom: 64px;
+
+}
+.bqbg>.bq{
+	
+}
+.bq>p{
+	font-size: 14px;
+	color: #ccc;
+	text-align: center;
+}
+.zzz{
+	text-align: center;
+
+}
+.zzz>a{
+	position: relative;
+	font-size: 14px;
+	color: #ccc;
+}
+.zzz i{
+	position: absolute;
+	left: -2px;
+	top: 2px;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url(../images/fklogo.png) no-repeat center center;
+	}
+.zzz>span{
+	font-size: 14px;
+	color: #ccc;
+}
+/* 版权 end */

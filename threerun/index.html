@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #box {
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        
+        #box p {
+            text-align: center;
+        }
+        
+        #box select {
+            width: 100%;
+            display: block;
+            height: 30px;
+        }
+        
+        #box option {}
+        
+        #box button {
+            width: 80px;
+            height: 30px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <form action="">
+
+            <select class="provincelist" v-model="provincenum" name="城市 " @change="changeprovince($event)">
+                <option value="default">请选择-省-</option>
+                <option :value="key" v-for="(item,key,index) in province_list">{{item}}</option>
+            </select>
+
+            <select class="citylist " v-model="citynum" name="城市 " id="" @change="changecity($event)">
+                <option value="default">请选择-城市-</option>
+                <option :value="key" v-for="(item,key,index) in newcitylist">{{item}}</option>
+            </select>
+
+            <select class="countylist " v-model="countynum" name="县/区 " id=" ">
+                <option value="default">请选择-县/区-</option>
+                <option :value="key" v-for="(item,key,index) in newcountylist">{{item}}</option>
+            </select>
+            <button type="submit">提交</button>
+        </form>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js "></script>
+<script src="./area.js "></script>
+<script>
+    new Vue({
+        el: "#box ",
+        data: {
+            provincenum: "default",
+            citynum: "default",
+            countynum: "default",
+            province_list: area.province_list,
+            city_list: area.city_list,
+            county_list: area.county_list,
+            provinceactive: 0,
+            cityctive: 0,
+            newcitylist: {},
+            newcountylist: {},
+        },
+
+        methods: {
+            changeprovince(event) {
+                this.provinceactive = event.target.value
+                let code = this.provinceactive
+                this.citynum = "default"
+                this.countynum = "default"
+                this.newcitylist = {};
+                this.newcountylist = {};
+                code = code.slice(0, 2)
+                for (let key in this.city_list) {
+                    if (key.startsWith(code)) {
+                        this.newcitylist[key] = this.city_list[key]
+                    }
+                }
+                // console.log(this.newcitylist)
+
+            },
+            changecity(event) {
+                this.cityctive = event.target.value
+                let code = this.cityctive
+                this.countynum = "default"
+                this.newcountylist = {};
+                code = code.slice(0, 4);
+                for (let key in this.county_list) {
+                    if (key.startsWith(code)) {
+                        this.newcountylist[key] = this.county_list[key]
+                    }
+                }
+                // console.log(this.newcountylist)
+            },
+
+        },
+    })
+</script>
+
+</html>

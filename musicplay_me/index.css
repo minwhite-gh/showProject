@@ -1,0 +1,420 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.muscibox {
+  height: 100%;
+}
+.muscibox audio {
+  height: 50px;
+  width: 100%;
+  display: none;
+}
+.muscibox .topbox {
+  height: 180px;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  overflow: hidden;
+}
+.muscibox .topbox .audiodiv {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.muscibox .topbox .audiodiv .mask {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: blur(10px) brightness(0.8) contrast(1.2);
+          filter: blur(10px) brightness(0.8) contrast(1.2);
+  background-image: url("https://p2.music.126.net/yWtj0UXRJBCT9YI7csmAcw==/109951164190741294.jpg");
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+}
+.muscibox .topbox .audiodiv .imgbox {
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  background-image: url(img/cd.png);
+  -moz-background-size: 100%;
+       background-size: 100%;
+}
+.muscibox .topbox .audiodiv .imgbox.active {
+  -webkit-animation: myrotate 15s linear infinite;
+     -moz-animation: myrotate 15s linear infinite;
+       -o-animation: myrotate 15s linear infinite;
+          animation: myrotate 15s linear infinite;
+}
+.muscibox .topbox .audiodiv .imgbox img {
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+.muscibox .topbox .audiodiv .playbox {
+  width: 30px;
+  -webkit-transform-origin: right top;
+     -moz-transform-origin: right top;
+      -ms-transform-origin: right top;
+       -o-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: rotate(-12deg) translateX(-12px);
+     -moz-transform: rotate(-12deg) translateX(-12px);
+      -ms-transform: rotate(-12deg) translateX(-12px);
+       -o-transform: rotate(-12deg) translateX(-12px);
+          transform: rotate(-12deg) translateX(-12px);
+}
+.muscibox .topbox .audiodiv .playbox.active {
+  -webkit-transform: rotate(0deg) translateX(-12px);
+     -moz-transform: rotate(0deg) translateX(-12px);
+      -ms-transform: rotate(0deg) translateX(-12px);
+       -o-transform: rotate(0deg) translateX(-12px);
+          transform: rotate(0deg) translateX(-12px);
+}
+.muscibox .topbox .audiodiv .textbox {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 330px;
+  padding-left: 20px;
+}
+.muscibox .topbox .audiodiv .textbox h3 {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.9;
+}
+.muscibox .topbox .audiodiv .textbox p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 1.9;
+}
+.muscibox .topbox .audiodiv .textbox .controls {
+  margin-bottom: 26px;
+  position: relative;
+}
+.muscibox .topbox .audiodiv .textbox .controls i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  font-family: iconfont !important;
+  font-size: 16px;
+  font-style: normal;
+  color: #fff;
+}
+.muscibox .topbox .audiodiv .textbox .controls .prev::after {
+  content: "\f0069";
+}
+.muscibox .topbox .audiodiv .textbox .controls .stop.activestop::after {
+  content: "\e76a";
+}
+.muscibox .topbox .audiodiv .textbox .controls .stop::after {
+  content: "\e66a";
+}
+.muscibox .topbox .audiodiv .textbox .controls .next::after {
+  content: "\f006a";
+}
+.muscibox .topbox .audiodiv .textbox .controls .playlist.playlb::after {
+  content: "\e66c";
+}
+.muscibox .topbox .audiodiv .textbox .controls .playlist.playsj::after {
+  content: "\e622";
+}
+.muscibox .topbox .audiodiv .textbox .controls .playlist.playone::after {
+  content: "\e66d";
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox {
+  float: right;
+  height: 16px;
+  line-height: 16px;
+  position: relative;
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox i.sound {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox i.sound::after {
+  content: "\e87a";
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox i.sound.active::after {
+  content: "\e61e";
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox input.voicebtn {
+  width: 90px;
+  opacity: 0;
+  margin-left: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox div.voicebtnsliderbox {
+  width: 87px;
+  height: 6px;
+  margin-left: 20px;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox div.voicebtnsliderbox .voicebtnslider {
+  height: 6px;
+  width: 87px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #0cb6d4;
+  position: relative;
+}
+.muscibox .topbox .audiodiv .textbox .controls .voicebtnbox div.voicebtnsliderbox .voicebtnslider i {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  background-color: #0cb6d4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+.muscibox .topbox .audiodiv .textbox .progress {
+  height: 7px;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.muscibox .topbox .audiodiv .textbox .progress input {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  z-index: 2;
+  opacity: 0;
+}
+.muscibox .topbox .audiodiv .textbox .progress .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 7px;
+  width: 10px;
+  background-color: #0cb6d4;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.muscibox .topbox .audiodiv .textbox .progress .Time {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  position: absolute;
+  width: 32px;
+  height: 16px;
+}
+.muscibox .topbox .audiodiv .textbox .progress .nowTime {
+  left: 0px;
+  top: 10px;
+}
+.muscibox .topbox .audiodiv .textbox .progress .totalTime {
+  right: 0px;
+  top: 10px;
+}
+.muscibox .bottombox {
+  background-color: #0e0e0e;
+  color: #333;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 30px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.muscibox .bottombox ul li {
+  display: block;
+  font-family: iconfont !important;
+  padding-left: 24px;
+  color: #fff;
+  position: relative;
+  line-height: 1.9;
+  font-size: 14px;
+}
+.muscibox .bottombox ul li.active i {
+  font-style: normal;
+  float: left;
+  position: absolute;
+  left: 4px;
+  top: 0px;
+}
+.muscibox .bottombox ul li.active i::after {
+  content: "\e87a";
+}
+.muscibox .search {
+  width: 100%;
+  margin-top: 20px;
+}
+.muscibox .search input {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  border: 1px solid black;
+  text-indent: 1em;
+}
+.muscibox .search button {
+  width: 18%;
+  height: 40px;
+  outline: none;
+  background-color: black;
+  border: 0;
+  color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  margin-left: 1%;
+}
+.muscibox .search ul {
+  margin-top: 10px;
+}
+.muscibox .search ul li {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.muscibox .search ul li .bkimg {
+  background-position: center;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  -webkit-filter: blur() brightness(0.7) contrast(0.7);
+          filter: blur() brightness(0.7) contrast(0.7);
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+}
+.muscibox .search ul li .bkimg .imgbox {
+  float: left;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+.muscibox .search ul li .bkimg .imgbox img {
+  width: 100%;
+  height: 100%;
+}
+.muscibox .search ul li .bkimg .name {
+  float: left;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 20px;
+}
+.muscibox .search ul li .bkimg .singer {
+  float: left;
+  font-size: 15px;
+  color: #ccc;
+  position: absolute;
+  top: 26px;
+  left: 70px;
+}
+@-webkit-keyframes myrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-moz-keyframes myrotate {
+  from {
+    -moz-transform: rotate(0deg);
+         transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+         transform: rotate(360deg);
+  }
+}
+@-o-keyframes myrotate {
+  from {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+}
+@keyframes myrotate {
+  from {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=./index.css.map */

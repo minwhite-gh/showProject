@@ -1,0 +1,512 @@
+/* 轮播图 begin */
+.PlantingMap {
+	width: 100%;
+}
+
+.Plantingmapbox {
+	height: 406px;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.Plantingmapbox>ul>li {
+	height: 406px;
+}
+
+.Pmapa {
+	display: block;
+	height: 406px;
+}
+
+/* .Plantingmapbox li{
+	display: inline-block;
+	height: 406px;
+	width: 1920px;
+
+} */
+.mapddiv {
+	width: 100%;
+	height: 406px;
+	background: url(../img/01.jpg) no-repeat center;
+}
+
+.bannerbox {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+.banner {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+}
+
+.banner>ul {}
+
+.banner>ul>li :hover {
+	color: #E32361;
+}
+
+.banner .bannerlidiv {
+	background-color: #fff;
+	border-top: #e6e6e6 solid 1px;
+	border-left: #e6e6e6 solid 1px;
+	border-right: #e6e6e6 solid 1px;
+}
+
+.banner .bannerlidiv>a {
+	display: block;
+	width: 154px;
+	height: 28px;
+	padding: 14px 15px 15px 20px;
+	color: #000;
+	line-height: 28px;
+}
+
+.banner .bannerlidiv>a>span {
+	display: inline-block;
+	float: right;
+
+}
+
+/* 轮播图 end */
+/* 弹出框 begin */
+.bannerlidivtc{
+	width: 934px;
+	height: 384px;
+	padding: 0 22px 20px 52px;
+	border-top:#E6E6E6 solid 1px;
+	border-right:#E6E6E6 solid 1px;
+	border-bottom:#E6E6E6 solid 1px;
+	position: absolute;
+	left: 191px;
+	top:0px;
+	z-index: 100;
+	background-color: #F7F7F7;
+	display: none;
+}
+.bannerlidivtc-le{
+	width: 630px;
+    float: left;
+    margin-top: 20px;
+}
+.bannerlidivtcle-a>p{
+	line-height: 26px;
+	font-size: 13px;
+	color: #000000;
+	font-weight: 550;
+	width: 100px;
+}
+.bannerlidivtcle-a>ul{
+	margin-left: 96px;
+	padding-bottom: 5px;
+	
+}
+.bannerlidivtcle-a>ul>li{
+	float: left;
+	border-left: #E5E5E5 solid 1px;
+	
+}
+.banner .bannerli:hover .bannerlidivtc{
+	display: block;
+}
+.bannerlidivtcle-a>ul>li>a{
+	font-size: 12px;
+	color: #000000;
+	margin: 0 12px;
+}
+
+
+/* 弹出框 end */
+
+
+
+/* 顶部图标块 begin */
+.bodytop {
+	width: 1200px;
+	margin: 0 auto;
+	border-bottom: #989898 solid 1px;
+}
+
+.bodytop>ul {
+	width: 1080px;
+	height: 74px;
+	text-align: center;
+	padding-top: 16px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.bodytop>ul>li {
+	display: inline-block;
+	float: left;
+	margin: 0 30px;
+	width: 60px;
+	height: 70px;
+
+}
+
+.bodytop>ul>li>a {
+	color: #9c9c9c;
+	display: block;
+	width: 60px;
+	height: 70px;
+	text-align: center;
+}
+
+.bodytop>ul>li>a:hover {
+	color: #5B5B5B;
+}
+
+.bodytop>ul>li>a:hover img.bodytopimg1 {
+	display: none;
+	margin: 0 auto;
+
+}
+
+.bodytop>ul>li>a:hover img.bodytopimg2 {
+	display: block;
+	margin: 0 auto;
+
+}
+
+.bodytop>ul>li>a>img {
+	width: 36px;
+	height: 36px;
+	text-align: center;
+}
+
+.bodytop>ul>li>a>img.bodytopimg1 {
+	display: block;
+	margin: 0 auto;
+
+}
+
+.bodytop>ul>li>a>img.bodytopimg2 {
+	display: none;
+	margin: 0 auto;
+}
+
+.bodytop>ul>li>a>p {
+	font-size: 12px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* 顶部图标块 end */
+
+/* 中间板块汇总 begin */
+.bodybg {
+	width: 100%;
+	background-color: #F5F5F5;
+	padding-top: 33px;
+
+}
+
+/* 今日秒杀 begin */
+.Spikebox {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.Spikeleft {
+	background: url(../img/afd06910-5fe9-424e-b04d-091f36adfb50.png) no-repeat center;
+	width: 190px;
+	height: 430px;
+}
+
+.Spikeleft .Spikeleftsp1 {
+	font-size: 21px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-top: 139px;
+	font-family: "微软雅黑";
+}
+
+.Spikeleft .Spikeleftsp2 {
+	font-size: 15px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-top: 102px;
+}
+
+.spans {
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 28px;
+
+}
+
+.Spikeleftsp3,
+.Spikeleftsp4,
+.Spikeleftsp5 {
+	font-size: 20px;
+	color: #000;
+	font-weight: 800;
+	margin: 0 8px;
+}
+
+.Spikeright {
+	width: 1006px;
+	height: 430px;
+	overflow: hidden;
+	margin-left: 4px;
+}
+
+.Spikeright1 {
+	display: inline-block;
+	width: 490px;
+	height: 208px;
+	margin: 7px 0px 7px 11px;
+	background-color: #fff;
+	position: relative;
+}
+
+.Spikeright1img>a>img {
+	width: 230px;
+	height: 208px;
+}
+
+.Spikeright1text1 {
+	width: 240px;
+	height: 21px;
+	padding-top: 44px;
+
+}
+
+.Spikeright1text1>p {
+	font-size: 16px;
+	font-weight: 500;
+
+}
+
+.Spikeright1price {
+	position: absolute;
+	top: 140px;
+	width: 229px;
+	height: 31px;
+	border: 1px solid #DF2634;
+}
+
+.price_left {
+	float: left;
+	width: 159px;
+	height: 29px;
+	line-height: 29px;
+}
+
+.price_left>p {
+	margin-left: 5px;
+}
+
+.price_left a .pricespan1 {
+	float: left;
+	font-size: 13px;
+	color: #ff0000;
+	font-weight: 500;
+	margin: 1px 0;
+
+}
+
+.price_left a .pricespan2 {
+	float: left;
+	font-size: 16px;
+	color: #ff0000;
+	font-weight: 500;
+	margin: 1px 0;
+
+}
+
+.price_left .spanspan1 {
+	color: #767676;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.price_left .spanspan2 {
+	color: #767676;
+	font-size: 13px;
+	font-weight: 500;
+
+}
+
+.price_right {
+	float: right;
+	display: inline-block;
+	width: 70px;
+	height: 31px;
+	background-color: #DF2634;
+	line-height: 31px;
+}
+
+.price_right>span {
+	display: block;
+	color: white;
+	width: 52px;
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+/* 今日秒杀 end */
+
+/* 中间六板块 begin */
+.body1 {
+	margin-bottom: 30px;
+}
+
+.body1top {
+	height: 78px;
+}
+
+.body1top>h3 {
+	margin-top: 30px;
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+}
+
+.body1topa {
+	float: right;
+	margin-top: 52px;
+	height: 16px;
+}
+
+.body1topa>a {
+	float: left;
+	font-size: 12px;
+	color: #6F7170;
+	margin-left: 12px;
+
+}
+
+.body1topaspan {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+	background: url(../img/302163a8-c40a-4ac0-979e-26f7bc8d9bcd.png) no-repeat -41px -434px;
+}
+
+.body1bodyleft {
+	width: 240px;
+	height: 535px;
+}
+
+.body1bodyleft>img {
+	width: 240px;
+	height: 535px;
+
+}
+
+.body1bodyright {
+	width: 960px;
+	height: 535px;
+	border-top: #dedede solid 1px;
+
+}
+
+.body1bodyright>ul {}
+
+.body1bodyright>ul>li {
+	background-color: #fff;
+	width: 239px;
+	height: 266px;
+	text-align: center;
+	border-right: #dedede solid 1px;
+	border-bottom: #dedede solid 1px;
+	position: relative;
+}
+.li_img{
+	width: 54px;
+	height: 54px;
+	position: absolute;
+	right: 0px;
+	top: -1px;
+	background: url(../img/302163a8-c40a-4ac0-979e-26f7bc8d9bcd.png) no-repeat 0 -699px;
+}
+.body1bodyright .cptimga {
+	display: block;
+	padding: 12px 0;
+	width: 239px;
+	height: 156px;
+}
+
+.body1bodyright .cptimg img {
+	width: 164px;
+	height: 164px;
+}
+
+.cpta1 {
+	display: block;
+	width: 211px;
+	height: 20px;
+	overflow: hidden;
+	font-size: 14px;
+	padding: 0 14px;
+	font-weight: 500;
+	margin-top: 16px;
+}
+
+.cpta2 {
+	display: block;
+	height: 20px;
+	margin-top: 20px;
+	color: #E2231A;
+	font-weight: 500;
+	font-size: 14px;
+
+
+}
+
+/* 中间六板块 end*/
+
+/* 中间板块汇总 end */
+
+
+
+
+/* 售后服务 begin */
+.shop_footer {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* 售后服务 end */
+
+
+/* 尾部板块 begin */
+.footer {
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.footertop {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.footertop>dl {
+	padding-right: 143px;
+}
+
+.footertop>dl>dt {
+	font-size: 14px;
+	color: #000;
+	height: 31px;
+	font-weight: 500;
+}
+
+.footertop>dl>dd {
+	font-size: 12px;
+	color: #555555;
+	height: 22px;
+	font-weight: 500;
+}
+
+/* 尾部板块 end */
